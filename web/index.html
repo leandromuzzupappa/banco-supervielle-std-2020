@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervielle - Convención 2020 - STD</title>
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+<body>
+
+    <div id="popup">
+        <p id="serverResponse">
+        </p>
+        <div id="closeP">
+            X
+        </div>
+    </div>
+    <div id="sstatus"></div>
+    <div id="overlay"></div>
+
+    <header>
+
+        <section class="col image">
+        </section>
+        <section class="col bajada">
+            <h1>Confirmá tu asistencia</h1>
+            <a target="_blank" href="https://docs.google.com/spreadsheets/d/13P9D_wC6DFh2Nc9JY8qcQPMJbhYcxcTBZoPorL5b_uI/edit#gid=1375225892">Mirar respuestas aca</a>
+
+            <form id="STDform" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
+
+                <div class="col formGroup">
+                    <label for="entry.821673028">Nombre y Apellido</label>
+                    <input type="text" name="entry.821673028" id="nombreCompleto">
+                </div>
+                <div class="col formGroup">
+                    <label for="entry.674535025">Correo Electrónico</label>
+                    <input type="email" name="entry.674535025" id="email">
+                </div>
+
+                <div class="col formGroup">
+                    <label for="entry.763619302">DNI</label>
+                    <input type="text" name="entry.763619302" id="dni" pattern=".{8,}" maxlength="10" title="Ingrese 8 carácteres">
+                </div>
+                <div class="col formGroup">
+                    <label for="asistencia">Asistencia</label>
+                    <div id="asistencia" class="custom-select-wrapper">
+                        <div class="custom-select">
+                            <div class="custom-select__trigger"><span name="entry.1081758758">Seleccionar</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="seleccionar">Seleccionar</span>
+                                <span class="custom-option" data-value="si">Si</span>
+                                <span class="custom-option" data-value="no">No</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col formGroup">
+                    <label for="traslado">Traslado</label>
+                    <div id="traslado" class="custom-select-wrapper">
+                        <div class="custom-select">
+                            <div class="custom-select__trigger"><span name="entry.835211766">Seleccionar</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="seleccionar">Seleccionar</span>
+                                <span class="custom-option" data-value="no-aplica">No aplica</span>
+                                <span class="custom-option" data-value="vehiculo-corporativo">Vehículo corporativo</span>
+                                <span class="custom-option" data-value="traslado-del-banco-zona-sur">Traslado del banco (Zona Sur)</span>
+                                <span class="custom-option" data-value="traslado-del-banco-zona-norte">Traslado del banco (Zona Norte)</span>
+                                <span class="custom-option" data-value="traslado-del-banco-zona-oeste">Traslado del banco (Zona Oeste)</span>
+                                <span class="custom-option" data-value="edificio-corporativo">Edificio corporativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col formGroup">
+                    <label for="restriccion-alimentaria">Restricción alimentaria</label>
+                    <div id="restriccion-alimentaria" class="custom-select-wrapper">
+                        <div class="custom-select">
+                            <div class="custom-select__trigger"><span name="entry.1115736034">Seleccionar</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="seleccionar">Seleccionar</span>
+                                <span class="custom-option" data-value="no-aplica">No aplica</span>
+                                <span class="custom-option" data-value="celiaco">Celíaco</span>
+                                <span class="custom-option" data-value="vegano">Vegano</span>
+                                <span class="custom-option" data-value="vegetariano">Vegetariano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col formGroup">
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </section>
+
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>
