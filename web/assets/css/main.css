@@ -120,6 +120,11 @@ section {
   display: none;
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
 header {
   width: 100%;
 }
@@ -127,9 +132,38 @@ header {
 header .image {
   width: 50%;
   height: 100vh;
-  background: url(../images/lineas.svg) right center no-repeat, url(../images/header.jpg) -300px center no-repeat;
+  background: url(../images/lineas.svg) 101% center no-repeat, url(../images/header.jpg) -300px center no-repeat;
   background-size: contain, cover;
   border: 0;
+  position: relative;
+}
+
+header .image .logo {
+  width: 450px;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .image .datos {
+  width: 100%;
+  position: absolute;
+  bottom: 12%;
+  text-align: center;
+  font-size: 0px;
+}
+
+header .image .datos img {
+  width: 35%;
+}
+
+header .image .datos img.left {
+  border-radius: 10px 0px 0px 10px;
+}
+
+header .image .datos img.right {
+  border-radius: 0px 10px 10px 0px;
 }
 
 header .bajada {
@@ -137,7 +171,6 @@ header .bajada {
   height: 100vh;
   padding: 180px 20px;
   overflow-y: scroll;
-  border: 1px solid red;
 }
 
 header .bajada h1 {
@@ -371,6 +404,62 @@ header .bajada form .formGroup .open .arrow::after {
   background-color: #7a174a;
 }
 
+#respuestas header {
+  width: 100%;
+  border-bottom: 1px solid #d62e27;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#respuestas header img {
+  width: 60%;
+  max-width: 111px;
+}
+
+#respuestas main {
+  text-align: center;
+}
+
+#respuestas main iframe {
+  width: 100%;
+  height: 80vh;
+  border: 0px;
+}
+
+#respuestas main .descargar {
+  margin: 20px 0px;
+  display: inline-block;
+  padding: 16px 60px;
+  border: 1px solid #ddddda;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: "whitney-bold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  background: #7a174a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #d62e27, #7a174a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #d62e27, #7a174a);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  cursor: pointer;
+  color: white;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#respuestas main .descargar:hover {
+  padding: 16px 65px;
+  -moz-box-shadow: 0px 20px 20px 0px rgba(214, 46, 39, 0.08);
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(214, 46, 39, 0.08);
+  -o-box-shadow: 0px 20px 20px 0px rgba(214, 46, 39, 0.08);
+  -ms-box-shadow: 0px 20px 20px 0px rgba(214, 46, 39, 0.08);
+  box-shadow: 0px 20px 20px 0px rgba(214, 46, 39, 0.08);
+}
+
 @media (max-width: 1680px) {
   header .image {
     background: url(../images/lineas.svg) right center no-repeat, url(../images/header.jpg) -400px center no-repeat;
@@ -426,6 +515,12 @@ header .bajada form .formGroup .open .arrow::after {
     background: url(../images/lineas-h.svg) center bottom no-repeat, url(../images/header.jpg) center center no-repeat;
     background-size: contain, cover;
   }
+  header .image .logo {
+    bottom: 45%;
+  }
+  header .image .datos {
+    bottom: 20%;
+  }
   header .bajada {
     width: 100%;
     height: auto;
@@ -438,8 +533,24 @@ header .bajada form .formGroup .open .arrow::after {
   header .image {
     width: 100%;
     height: 85vh;
-    background: url(../images/lineas-h.svg) center bottom no-repeat, url(../images/header.jpg) center center no-repeat;
+    background: url(../images/lineas-h.svg) center bottom no-repeat, url(../images/header-m.jpg) center center no-repeat;
     background-size: contain, cover;
+  }
+  header .image .logo {
+    width: 80%;
+    bottom: 50%;
+  }
+  header .image .datos {
+    bottom: 10%;
+  }
+  header .image .datos img {
+    width: 60%;
+  }
+  header .image .datos img.left {
+    border-radius: 10px 10px 0px 0px;
+  }
+  header .image .datos img.right {
+    border-radius: 0px 0px 10px 10px;
   }
   header .bajada {
     width: 100%;

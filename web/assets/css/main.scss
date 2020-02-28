@@ -136,20 +136,49 @@ section {
     display: none;
 }
 
+iframe {
+    width: 100%;
+     height: 100%;
+}
+
 header {
     width: 100%;
     .image {
         width: 50%; height: 100vh;
-        background: url(../images/lineas.svg) right center no-repeat,url(../images/header.jpg) -300px center no-repeat;
+        background: url(../images/lineas.svg) 101% center no-repeat,url(../images/header.jpg) -300px center no-repeat;
         background-size: contain, cover;
         border: 0;
+        position: relative;
+        .logo {
+            width: 450px;
+            position: absolute;
+            bottom: 30%; left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        .datos {
+            width: 100%;
+            position: absolute;
+            bottom: 12%; //left: -20px;
+            text-align: center;
+            font-size: 0px;
+            img {
+                width: 35%;
+                &.left {
+                    border-radius: 10px 0px 0px 10px;
+                }
+                &.right {
+                    border-radius: 0px 10px 10px 0px;
+                }
+            }
+        }
     }
     .bajada {
         width: 49%; height: 100vh;
         padding: 180px 20px;
         //vertical-align: top;
         overflow-y: scroll;
-        border: 1px solid red;
+        //border: 1px solid red;
         h1 {
             font-family: $whitney-bold;
             text-transform: uppercase;
@@ -334,6 +363,44 @@ header {
         }
     }
 }
+#respuestas {
+    header {
+        width: 100%;
+        border-bottom: 1px solid $orange;
+        text-align: center;
+        padding: 10px 0px;
+        img {
+            width: 60%;
+            max-width: 111px;
+        }
+    }
+    main {
+        text-align: center;
+        iframe {
+            width: 100%; height: 80vh;
+            border: 0px;
+        }
+        .descargar {
+            margin: 20px 0px;
+            display: inline-block;
+            padding: 16px 60px;
+            border: 1px solid $lgray;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: $whitney-bold;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            @include lgradient($purple, $orange);
+            cursor: pointer;
+            color: $white;
+            @include transition(.2s);
+            &:hover {
+                padding: 16px 65px;
+                @include shadow(0px, 20px, 20px, $orange, .08);
+            }
+        }
+    }
+}
 
 @media(max-width: 1680px){
     header {
@@ -418,6 +485,12 @@ header {
                 url(../images/header.jpg) center center no-repeat
             ;
             background-size: contain, cover;
+            .logo {
+                bottom: 45%;
+            }
+            .datos {
+                bottom: 20%;
+            }
         }
         .bajada {
             width: 100%; height: auto;
@@ -432,9 +505,26 @@ header {
             width: 100%; height: 85vh;
             background:
                 url(../images/lineas-h.svg) center bottom no-repeat,
-                url(../images/header.jpg) center center no-repeat
+                url(../images/header-m.jpg) center center no-repeat
             ;
             background-size: contain, cover;
+
+            .logo {
+                width: 80%;
+                bottom: 50%;
+            }
+            .datos {
+                bottom: 10%;
+                img {
+                    width: 60%;
+                    &.left {
+                        border-radius: 10px 10px 0px 0px;
+                    }
+                    &.right {
+                        border-radius: 0px 0px 10px 10px;
+                    }
+                }
+            }
         }
         .bajada {
             width: 100%; height: auto;
