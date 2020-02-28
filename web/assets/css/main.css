@@ -404,6 +404,10 @@ header .bajada form .formGroup .open .arrow::after {
   background-color: #7a174a;
 }
 
+#respuestas {
+  display: none;
+}
+
 #respuestas header {
   width: 100%;
   border-bottom: 1px solid #d62e27;
